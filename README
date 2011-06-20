@@ -1,4 +1,14 @@
+What
+====
+
 Client and server for file transfers that use multiple TCP connections.
 The idea is to get an unfair share of the bottleneck link bandwidth by
 using multiple TCP connections.  From my tests, this outperforms
 single-TCP file-transfers by 3x-8x in cross-country transfers.
+
+Usage
+=====
+
+Run server.rb at one end
+
+Run client.rb at other end
