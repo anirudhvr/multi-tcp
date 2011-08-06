@@ -6,6 +6,9 @@ The idea is to get an unfair share of the bottleneck link bandwidth by
 using multiple TCP connections.  From my tests, this outperforms
 single-TCP file-transfers by 3x-8x in cross-country transfers.
 
+The code is just about usable, and there's a ton of things to be done
+to make it work better, but who has time?
+
 Usage
 =====
 
