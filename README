@@ -1,22 +1,23 @@
 What
 ====
 
-This was hacked together in 2 hours after getting frustrated by the time 
+This was hacked together in 2 hours after getting frustrated by the time
 it took to transfer a 1.4 GB file over a single connection from the east
-coast to the West. A single TCP connection gives you only your fair share
-of the bottleneck link(s), and the large bw-delay product for cross-country
-connections means that congestion will completely shatter the existing 
-window and will take several RTTs to be built up again. 
+coast to the West. A single TCP connection gives you only your fair
+share of the bottleneck link(s), and the large bw-delay product for
+cross-country connections means that congestion will completely shatter
+the existing window and will take several RTTs to be built up again. 
 
-This program logically breaks up the file you want to transfer into a number
-of specified chunks and sends each over a separate TCP connection. So, assuming
-there were n other TCP connections on the congested link and you create m 
-connections, you will now get m/(n+m) share of the link where you previously 
-only had 1/(n+1). Too high a value of m can cause a congestion collapse, so
-play around with the setting to figure out the best overall throughput. 
+This program logically breaks up the file you want to transfer into a
+number of specified chunks and sends each over a separate TCP
+connection. So, assuming there were n other TCP connections on the
+congested link and you create m connections, you will now get m/(n+m)
+share of the link where you previously only had 1/(n+1). Too high a
+value of m can cause a congestion collapse, so play around with the
+setting to figure out the best overall throughput. 
 
-The code is just about usable, and there's a ton of things to be done
-to make it work better, but who has the time?
+The code is just about usable, and there's a ton of things to be done to
+make it work better, but who has the time?
 
 Usage
 =====
